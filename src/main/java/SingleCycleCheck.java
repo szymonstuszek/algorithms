@@ -16,7 +16,6 @@ public class SingleCycleCheck {
             if (anyIndexVisitedMoreThanOnce(arrayOfVisits)) {
                 return false;
             }
-
             sumOfElements = getSumOfElements(arrayOfVisits);
         }
 
@@ -25,20 +24,12 @@ public class SingleCycleCheck {
     }
 
     private static int calculatePosition(int currentJump, int numberOfElements) {
-        if (currentJump >= 0 && currentJump < numberOfElements) {
-            return currentJump;
-        }
-
         int moveBy = currentJump % numberOfElements;
-
-        if (moveBy > 0) {
+        if (moveBy >= 0) {
             return moveBy;
-        }
-
-        if (moveBy < 0) {
+        } else {
             return numberOfElements + moveBy;
         }
-        return moveBy;
     }
 
     private static int getSumOfElements(int[] array) {
