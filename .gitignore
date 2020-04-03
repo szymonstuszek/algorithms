@@ -1,0 +1,7 @@
+.exercism
+.gradle
+.idea
+out
+gradle
+.resistor-color.iml
+README.md
