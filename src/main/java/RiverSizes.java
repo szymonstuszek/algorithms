@@ -28,7 +28,6 @@ public class RiverSizes {
         coordinatesToVisit.add(new int[]{row, column});
         int riverSize = 0;
 
-
         while (!coordinatesToVisit.isEmpty()) {
             int[] coordinate = coordinatesToVisit.poll();
             row = coordinate[0];
