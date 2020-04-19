@@ -67,8 +67,6 @@ public class MinHeapConstruction {
         }
 
         public static void swap(int i, int j, List<Integer> heap) {
-
-
             int temp = heap.get(i);
             heap.set(i, heap.get(j));
             heap.set(j, temp);
