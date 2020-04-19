@@ -9,7 +9,7 @@ public class PermutationsTest {
 
     @Test
     public void testPermutations() {
-        List<Integer> input = new ArrayList<>(Arrays.asList(1, 2, 3));
+        List<Integer> input = new ArrayList<>(Arrays.asList(1, 2, 3, 4));
         List<List<Integer>> permutations = Permutations.getPermutations(input);
     }
 

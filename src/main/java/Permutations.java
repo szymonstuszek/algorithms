@@ -21,6 +21,22 @@ public class Permutations {
         }
     }
 
+    private static void getPermutations2(List<Integer> array, List<Integer> currentPermutation, List<List<Integer>> permutations) {
+
+        if (array.size() == 0 && currentPermutation.size() > 0) {
+            permutations.add(currentPermutation);
+        } else {
+            for (int i = 0; i < array.size(); i++) {
+                List<Integer> newArray = new ArrayList<>(array);
+                newArray.remove(i);
+
+                List<Integer> newPermutation = new ArrayList<>(currentPermutation);
+                newPermutation.add(array.get(i));
+                getPermutations2(newArray, currentPermutation, permutations);
+            }
+        }
+    }
+
     public static void swap(int i, int j, List<Integer> array) {
         int temp = array.get(i);
         array.set(i, array.get(j));
